@@ -22,6 +22,9 @@ Use the core.php file to setup your Firebase project ID, which is required for t
 ## Things To Enhance
 Since I'm using a complete JWT solution, I'd like to ween off of using Firebase authentication and have my system create and sign its own tokens.  There is already code in place to create a single user in a User database object.
 
+### Prerequisites
+PHP 5.6
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
