@@ -19,6 +19,22 @@ The php back-end for my [Glow Blog system](https://github.com/GlowPuff/Glow-Blog
 ### NOTES
 Use the core.php file to setup your Firebase project ID, which is required for token verification (property $fbProjectId).  This file also has a property called $approvedOrigin (defaults to 'https://localhost:8080' for development) to allow OPTIONS HTTP requests to go through.  Change this to your actual server for production.
 
+**UwAmp and secure cURL requests:** The backend makes a secure connection to a Google server in order to grab the latest Firebase keys. In order to make the secure connection, UwAmp has to be configured properly.
+[Original Instructions](https://mrant.net/uwamp-curl-error-60-ssl-certificate-problem-unable-to-get-local-issuer-certificate-see-http-curl-haxx-se-libcurl-c-libcurl-errors-html/)
+```
+UwAmp cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+If you get the above error you may need to specify a certificate file in your PHP.INI which you can download from  [https://curl.haxx.se/ca/cacert.pem](https://curl.haxx.se/ca/cacert.pem)
+
+Once downloaded edit your PHP.INI and set the following
+
+[curl]
+; A default value for the CURLOPT_CAINFO option.
+; This is required to be an absolute path.
+curl.cainfo = "C:\uwamp\bin\php\cacert.pem"
+```
+I put my cacert.pem file right in C:\
+
 ## Things To Enhance
 Since I'm using a complete JWT solution, I'd like to ween off of using Firebase authentication and have my system create and sign its own tokens.  There is already code in place to create a single user in a User database object.
 
