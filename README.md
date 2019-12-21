@@ -1,7 +1,7 @@
 
 # Glow Blog Backend
 
-The php back-end for my Glow Blog system, using Firebase JSON Web Tokens for security.  I built this for my GlowBlog Dashboard front-end, but it could be used on its own and integrated with your own front-end.  The JavaScript API is included in this project (BlogAPI folder) to use for that purpose.
+The php back-end for my [Glow Blog system](https://github.com/GlowPuff/Glow-Blog), using Firebase JSON Web Tokens for security.  I built this for my GlowBlog Dashboard front-end, but it could be used on its own and integrated with your own front-end.  The JavaScript API is included in this project (BlogAPI folder) to use for that purpose.
 
 
 
