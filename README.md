@@ -35,9 +35,6 @@ curl.cainfo = "C:\uwamp\bin\php\cacert.pem"
 ```
 I put my cacert.pem file right in C:\
 
-## Things To Enhance
-Since I'm using a complete JWT solution, I'd like to ween off of using Firebase authentication and have my system create and sign its own tokens.  There is already code in place to create a single user in a User database object.
-
 ### Prerequisites
 PHP 5.6
 
